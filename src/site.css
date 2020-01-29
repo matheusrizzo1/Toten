@@ -1,0 +1,129 @@
+body {
+  background: #f5f7fa;
+}
+
+#screensaver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: none;
+  z-index: 9999;
+  background: #f5f7fa;
+  color: #5b5b5b;
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+}
+
+#screensaver h1 {
+  font-size: 9rem;
+}
+
+#screensaver blockquote {
+  font-size: 3.5rem;
+}
+
+.bg::after {
+  background: url("/images/truck.jpg") center / cover;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.fade-out {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-duration: 1s;
+  animation-name: fadeout;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.top-img {
+  height: 85px;
+  margin-left: 63px;
+}
+
+.card {
+  box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07),
+    0 2px 9px 0 rgba(62, 57, 107, 0.06) !important;
+}
+
+.shortcuts a {
+  color: grey;
+}
+
+.shortcuts .card:hover {
+  box-shadow: 0 32px 78px 0 rgba(62, 57, 107, 0.07),
+    0 17px 56px 0 rgba(62, 57, 107, 0.06) !important;
+}
+
+.back {
+  font-size: 24px;
+  margin: 16px 0 0 10px;
+  position: absolute;
+  color: #585858;
+}
+
+.simple-keyboard {
+  width: 55% !important;
+  transform: translatex(41%);
+}
+
+.fa-backspace {
+  font-size: 28px;
+  margin-top: 4px;
+  color: #626262;
+}

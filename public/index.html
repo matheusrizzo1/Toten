@@ -24,10 +24,107 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Totem</title>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.css"
+      media="screen,projection"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/keyboard.css"
+      media="screen,projection"
+    />
+    <style>
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+      }
+
+      .loader img {
+        position: fixed;
+        height: 150px;
+        z-index: 1000;
+        top: 45%;
+        left: 52%;
+        transform: translate(-45%, -50%);
+        -ms-transform: translate(-45%, -50%);
+        /* IE 9 */
+        -webkit-transform: translate(-45%, -50%);
+        /* Chrome, Safari, Opera */
+      }
+
+      .loader .load {
+        transform: translate(-45%, -50%);
+        -ms-transform: translate(-45%, -50%);
+        -webkit-transform: translate(-45%, -50%);
+        position: fixed;
+        top: 54vh;
+        left: 50vw;
+        border: 3px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 3px solid #3498db;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 1.5s ease infinite;
+        animation: spin 1.5s ease infinite;
+      }
+
+      /* Safari */
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="loader" id="loader">
+      <img src="images/br2.png" />
+      <div class="load"></div>
+    </div>
+    <div id="screensaver" style="display: none;">
+      <div class="bg">
+          <p class="center-align"><img src="images/br2.png" class="top-img" /></p>
+          <h1 class="center-align thin">Projeto BR Toten</h1>
+          <p>
+              <blockquote class="center-align light" style="margin-top: 50px;">Visa <strong>facilitar</strong> e <strong>agilizar</strong> os processos
+                  <br>de <strong>check-in</strong> e <strong>check-out</strong> dos <strong>motoristas</strong>
+                  <br>nos embarcadores e transportadoras</blockquote>
+          </p>
+          <p class="center-align" style="font-size: 18px; margin-top: 200px;">toque para continuar</p>
+      </div>
+  </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -39,5 +136,9 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="text/javascript" src="js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="js/keyboard.js"></script>
+    <script type="text/javascript" src="js/keyboard-inputmask.js"></script>
+    <script type="text/javascript" src="js/Default.js"></script>
   </body>
 </html>
